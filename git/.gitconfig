@@ -1,6 +1,8 @@
 [user]
-	name = lf32
+	name = Akhil Raj
+	username = lf32
 	email = lf32.dev@gmail.com
+	signingkey = 1236B6328AAF6462
 
 [core]
 	editor = vim
