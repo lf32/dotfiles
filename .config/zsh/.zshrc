@@ -28,3 +28,4 @@ alias tree="tree -a"
 alias update="sudo pacman -Syu"
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export GPG_TTY=$(tty)
