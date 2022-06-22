@@ -3,7 +3,42 @@
 	username = lf32
 	email = lf32.dev@gmail.com
 	signingkey = 1236B6328AAF6462
-	
+
+[core]
+	editor = vim
+
+[color]
+	ui = auto
+
+[color "branch"]
+	current = yellow bold
+	local = green bold
+	remote = cyan bold
+
+[color "diff"]
+	meta = yellow bold
+	frag = magenta bold
+	old = red bold
+	new = green bold
+	whitespace = red reverse
+
+[color "status"]
+	added = green bold
+	changed = yellow bold
+	untracked = red bold
+
+[credential "https://github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
+[diff]
+	tool = vimdiff
+
+[difftool]
+	prompt = false
+
 [alias]
 	a = add --all
 	ai = add -i
@@ -135,44 +170,11 @@
 	wp = show -p
 	wr = show -p --no-color
 
-[core]
-	editor = vim
-
-[color]
-	ui = auto
-
-[color "branch"]
-	current = yellow bold
-	local = green bold
-	remote = cyan bold
-
-[color "diff"]
-	meta = yellow bold
-	frag = magenta bold
-	old = red bold
-	new = green bold
-	whitespace = red reverse
-
-[color "status"]
-	added = green bold
-	changed = yellow bold
-	untracked = red bold
-
-[credential "https://github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-[credential "https://gist.github.com"]
-	helper = 
-	helper = !/usr/bin/gh auth git-credential
-
-[diff]
-	tool = vimdiff
-
-[difftool]
-	prompt = false
-
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+
+[merge]
+	tool = vimdiff
